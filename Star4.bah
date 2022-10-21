@@ -1,0 +1,26 @@
+row=1
+line=1
+middile=5
+left=4
+right=6
+
+while [[ row -le 5 ]]
+do
+        line=1
+        while [[ line -le 9 ]]
+        do
+                if [[ line -le left ]] || [[ line -ge right ]]
+                then
+                        echo -n " "
+                else
+                        echo -n "*"
+                fi
+        line=$((line+1))
+        done
+
+
+        row=$((row+1))
+left=$((left-1))
+right=$((right+1))
+echo
+done
